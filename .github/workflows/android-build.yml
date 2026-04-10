@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
-          java-version: '17'
+          java-version: '21'
 
       - name: Remove Corrupt Wrapper
         run: rm -rf android/gradle/wrapper
@@ -33,6 +33,11 @@ jobs:
         with:
           gradle-version: 8.10.2
           validate-wrappers: false
+
+      - name: Generate Gradle Wrapper
+        run: |
+          cd android
+          gradle wrapper --gradle-version 8.10.2
 
       - name: Install Dependencies
         run: npm install
@@ -53,7 +58,7 @@ jobs:
       - name: Build Android APK
         run: |
           cd android
-          gradle :app:assembleRelease --stacktrace --info \
+          ./gradlew :app:assembleRelease --stacktrace --info \
             -Pandroid.injected.signing.store.file=$GITHUB_WORKSPACE/release-key.keystore \
             -Pandroid.injected.signing.store.password=my-secret-password \
             -Pandroid.injected.signing.key.alias=alias_name \
