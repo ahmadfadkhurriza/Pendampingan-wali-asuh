@@ -25,6 +25,9 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
+      - name: Remove Corrupt Wrapper
+        run: rm -rf android/gradle/wrapper
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
