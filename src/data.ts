@@ -1,0 +1,173 @@
+export interface AnakAsuh {
+  id: number;
+  name: string;
+}
+
+export interface WaliAsuhGroup {
+  id: number;
+  waliNames: string;
+  anakAsuh: AnakAsuh[];
+}
+
+export const waliAsuhData: WaliAsuhGroup[] = [
+  {
+    id: 1,
+    waliNames: "BU ERNA & PAK EKO WAHYUDI",
+    anakAsuh: [
+      { id: 1, name: "AURELIA SAKURA SALSABILA" },
+      { id: 2, name: "LAILA FEBRI NUR FATIN" },
+      { id: 3, name: "AMANDA AULIA PUTRI" },
+      { id: 4, name: "OSKA DEWI AGUSTINA" },
+      { id: 5, name: "DANISA FAHMA SANIA" },
+      { id: 6, name: "FIRDA AYU NATASYA" },
+      { id: 7, name: "ADELIA SUKMAWATI" },
+      { id: 8, name: "WIWIN NOVITA SARI" },
+      { id: 9, name: "MEY NASILA" },
+      { id: 10, name: "ADINDA ORISIA ZIAMYSE" },
+    ],
+  },
+  {
+    id: 2,
+    waliNames: "BU RINDA & PAK NANANG",
+    anakAsuh: [
+      { id: 1, name: "INDRI SUSMIATI" },
+      { id: 2, name: "SASKIA PUTRI" },
+      { id: 3, name: "AGUSTINE PRASTIKA PUTRI RAMADHANI" },
+      { id: 4, name: "YASMIN OKTAVIA" },
+      { id: 5, name: "CLAURA BINTANG MARETZKA SANTOSO" },
+      { id: 6, name: "EVELYNA FABIOLA IGNACIA" },
+      { id: 7, name: "VANESYA MELIANA SAFARA" },
+      { id: 8, name: "NOVITA NUR AFIFAH" },
+      { id: 9, name: "RASYA RAHMADANI" },
+      { id: 10, name: "AZZA WAFIQ AZIZAH" },
+    ],
+  },
+  {
+    id: 3,
+    waliNames: "BU PRICILIA & BU FURI",
+    anakAsuh: [
+      { id: 1, name: "MAULINA DWI SUHENI" },
+      { id: 2, name: "EKA INTAN LESTARI" },
+      { id: 3, name: "ANGGUN PUTRI NOVIATI" },
+      { id: 4, name: "SILMA ANDARISTA" },
+      { id: 5, name: "ANDIN TRI ANJANI" },
+      { id: 6, name: "SALSA DESI PUSPITA SARI" },
+      { id: 7, name: "DEWI NUR ROHMAH" },
+      { id: 8, name: "ALLFRINA ANGGUN NOURAIDA" },
+      { id: 9, name: "DELLA DWI CINTHIYA" },
+      { id: 10, name: "SELINA YUSINTHA MAHARANI" },
+    ],
+  },
+  {
+    id: 4,
+    waliNames: "BU AFIDA & PAK IVAKHUDIN",
+    anakAsuh: [
+      { id: 1, name: "Alisa Nur Andini" },
+      { id: 2, name: "ENDHU SETYA CAHYA NAVA CANDY" },
+      { id: 3, name: "UZLIFATUL JANAH" },
+      { id: 4, name: "KHARISA WAHYUNINGSIH" },
+      { id: 5, name: "MITA RORO PALUPI" },
+      { id: 6, name: "ANGGRAINI ALIFIANA WAHONO" },
+      { id: 7, name: "AILEEN RAINA EARTHA GUNAWAN" },
+      { id: 8, name: "VIEN INDAR AYU ROSITA" },
+      { id: 9, name: "REFI APRILLIAN WIRUTAMA" },
+      { id: 10, name: "ALDA YULIAFINSA" },
+    ],
+  },
+  {
+    id: 5,
+    waliNames: "BU CHUSFIA & PAK TEGUH",
+    anakAsuh: [
+      { id: 1, name: "ZASKIA INDAH DEWANTARI" },
+      { id: 2, name: "NADILA APRILA" },
+      { id: 3, name: "MENTARI APRILIA" },
+      { id: 4, name: "NUR KEYLA PUTRI HERIANI" },
+      { id: 5, name: "EKA SYIFAHNIA AURA FEBRIANA" },
+      { id: 6, name: "RAFIKA PUSPITASARI" },
+      { id: 7, name: "IMELDA PUTRI SUSANTI" },
+      { id: 8, name: "Anita Sabilana" },
+      { id: 9, name: "APRILLIA MIFTAKHUL JANAH" },
+      { id: 10, name: "MUTYA NINGSIH" },
+    ],
+  },
+  {
+    id: 6,
+    waliNames: "BU DEWI & PAK MUFID",
+    anakAsuh: [
+      { id: 1, name: "AINA AGUSTIZA" },
+      { id: 2, name: "FARIKHA NUR AINI" },
+      { id: 3, name: "TRI DESY PURNAMASARI" },
+      { id: 4, name: "Nelsa Aprilia" },
+      { id: 5, name: "NAFINSA AUREL AGUSTINA RAHMADANI" },
+      { id: 6, name: "NISWA INTAN APRILIANI" },
+      { id: 7, name: "AUDIA PUTRI AYU LESTARI" },
+      { id: 8, name: "NABILA AULIA SYAFIRA" },
+      { id: 9, name: "RIZKINA SALWA AZIZAH" },
+      { id: 10, name: "NENY NURUL NURAINI" },
+    ],
+  },
+  {
+    id: 7,
+    waliNames: "PAK HARIYADI & PAK RAFIF",
+    anakAsuh: [
+      { id: 1, name: "MOH FAZA FAUZAN ANDHIMA" },
+      { id: 2, name: "BANGKIT ADITIA DANI" },
+      { id: 3, name: "JEVA DAFA ALFARIZKY" },
+      { id: 4, name: "MUHAMMAD IHSANI NUR SAFAAT" },
+      { id: 5, name: "M FREYDO QOIDAR UMAR" },
+      { id: 6, name: "ROMI SEPTIAWAN" },
+      { id: 7, name: "AHMAD DAVID ALFHARO" },
+      { id: 8, name: "DANANG PRATAMA" },
+      { id: 9, name: "RIZAL MOCHAMMAD FEBHI" },
+      { id: 10, name: "HUDAN FAHMI SALIM" },
+    ],
+  },
+  {
+    id: 8,
+    waliNames: "PAK HARIYONO & PAK ZAINUDIN",
+    anakAsuh: [
+      { id: 1, name: "MOHAMMAD YUSUF WARDHANI" },
+      { id: 2, name: "M PRADITIA TRI SUCAHYO" },
+      { id: 3, name: "MUH ARDI PRADANA" },
+      { id: 4, name: "MOH AGUNG FIRMANSYAH" },
+      { id: 5, name: "KHOIRUL JAWALNURDIN" },
+      { id: 6, name: "RIZHU FABIONE AZHAFAR" },
+      { id: 7, name: "FINSEN IMANUEL" },
+      { id: 8, name: "QODAR PUTRA ARDIANSAH" },
+      { id: 9, name: "KRISTIYANTO" },
+      { id: 10, name: "KRISTIYONO" },
+    ],
+  },
+  {
+    id: 9,
+    waliNames: "PAK ARIS MAHMUD & PAK MUJI",
+    anakAsuh: [
+      { id: 1, name: "MOH FARDAN ALBRIAN SYAHPUTRA" },
+      { id: 2, name: "Aldy Mashar" },
+      { id: 3, name: "FABIAN DIAFA" },
+      { id: 4, name: "MOH NASRIL ILHAM" },
+      { id: 5, name: "ANDIKA DAFA DUWI PRASETIYA" },
+      { id: 6, name: "MOHAMMAD RIFAI" },
+      { id: 7, name: "MICKO SANDIKA PRATAMA" },
+      { id: 8, name: "MUHASIBI AN NAFSI" },
+      { id: 9, name: "FAJAR JUNIANANTA" },
+      { id: 10, name: "ACHMAD DEVA ADIANSA" },
+    ],
+  },
+  {
+    id: 10,
+    waliNames: "PAK CHABIB & PAK FICO",
+    anakAsuh: [
+      { id: 1, name: "SATRIA RIZKI RAMADHAN" },
+      { id: 2, name: "MOH ARGA DWI CAHYO" },
+      { id: 3, name: "MOH FARIH ROMADHON" },
+      { id: 4, name: "AFRILDO FRYES SEBASTIAN" },
+      { id: 5, name: "DAVID YANUAR REZA DEKA" },
+      { id: 6, name: "SODIKIN NUR ROKHIM" },
+      { id: 7, name: "ALE OKTAVINO" },
+      { id: 8, name: "WILDAN ADI NUGROHO" },
+      { id: 9, name: "GAGAH APRELIA SISWANTO" },
+      { id: 10, name: "ALFALANDHIKA TAURYSON EVANGELICAL" },
+    ],
+  },
+];
