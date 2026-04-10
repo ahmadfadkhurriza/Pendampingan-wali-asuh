@@ -23,13 +23,12 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
-          java-version: '17'
-
-      - name: Remove Corrupt Wrapper
-        run: rm -rf android/gradle/wrapper
+          java-version: '21'
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.12
 
       - name: Install Dependencies
         run: npm install
@@ -42,7 +41,7 @@ jobs:
 
       - name: Generate Keystore
         run: |
-          keytool -genkey -v -keystore release-key.keystore \
+          keytool -genkey -v -keystore android/app/release-key.keystore \
             -alias alias_name -keyalg RSA -keysize 2048 -validity 10000 \
             -storepass my-secret-password -keypass my-secret-password \
             -dname "CN=Wali Asuh, OU=SRMA 24, O=Kediri, L=Kediri, S=Jawa Timur, C=ID"
@@ -50,8 +49,8 @@ jobs:
       - name: Build Android APK
         run: |
           cd android
-          gradle assembleRelease \
-            -Pandroid.injected.signing.store.file=../release-key.keystore \
+          gradle assembleRelease --stacktrace --info \
+            -Pandroid.injected.signing.store.file=release-key.keystore \
             -Pandroid.injected.signing.store.password=my-secret-password \
             -Pandroid.injected.signing.key.alias=alias_name \
             -Pandroid.injected.signing.key.password=my-secret-password
@@ -66,4 +65,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: release-keystore
-          path: release-key.keystore
+          path: android/app/release-key.keystore
